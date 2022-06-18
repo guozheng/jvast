@@ -1,15 +1,15 @@
 package jvast;
 
-import jvast.data.VideoAdType;
+import jvast.model.VideoAdType;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-public class VastProcessor {
-  private static final Logger LOGGER = LogManager.getLogger(VastProcessor.class);
+public class SingleAdProcessor {
+  private static final Logger LOGGER = LogManager.getLogger(SingleAdProcessor.class);
   private StringBuilder vast;
   private VideoAdType type;
 
-  VastProcessor(StringBuilder vast, VideoAdType type) {
+  SingleAdProcessor(StringBuilder vast, VideoAdType type) {
     this.vast = vast;
     this.type = type;
   }

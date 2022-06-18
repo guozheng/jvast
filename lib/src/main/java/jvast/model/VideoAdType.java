@@ -1,4 +1,4 @@
-package jvast.data;
+package jvast.model;
 
 /**
  * Video ad type that includes template and specification version.

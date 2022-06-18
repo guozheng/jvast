@@ -1,4 +1,4 @@
-package jvast.data;
+package jvast.model;
 
 public enum TrackingEventElementType {
   unknown,

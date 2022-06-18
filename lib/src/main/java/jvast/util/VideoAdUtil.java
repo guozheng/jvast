@@ -1,6 +1,6 @@
 package jvast.util;
 
-import static jvast.data.PixelElementType.unknown;
+import static jvast.model.PixelElementType.unknown;
 import static jvast.util.StringUtil.EMPTY;
 
 import com.google.common.base.Strings;
@@ -12,12 +12,12 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.regex.Pattern;
-import jvast.VastAdProcessor;
-import jvast.data.Ad;
-import jvast.data.Pair;
-import jvast.data.PixelElementType;
-import jvast.data.TrackingEventElementType;
-import jvast.data.VideoAdType;
+import jvast.VastSingleAdProcessor;
+import jvast.model.Ad;
+import jvast.model.Pair;
+import jvast.model.PixelElementType;
+import jvast.model.TrackingEventElementType;
+import jvast.model.VideoAdType;
 import lombok.experimental.UtilityClass;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -25,10 +25,6 @@ import org.apache.logging.log4j.Logger;
 @UtilityClass
 public class VideoAdUtil {
   private static final Logger LOGGER = LogManager.getLogger(VideoAdUtil.class);
-
-  public static final String NULL_VAST = null; // used to indicate there is a timeout or error
-  //TODO: make RAMS return v2 or v3 empty VAST with correct schema declaration
-  public static final String EMPTY_VAST_RAMS = "<VAST version=\"2.0\"></VAST>"; // empty VAST returned by RAMS
 
   public static final String EMPTY_VAST_V2 = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n"
       + "<VAST xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:noNamespaceSchemaLocation=\"vast.xsd\" version=\"2.0\"/>";
@@ -54,28 +50,17 @@ public class VideoAdUtil {
   // extract creative ids
   public static final Pattern VAST_CREATIVE_ID_PATTERN =
       Pattern.compile("<Creative[^>]* id=\"(\\d*)\"[^>]*>");
-  // extract DAR pixel, note that this pattern also works on the rewritten RAMS third party DAR pixel
-  public static final Pattern DAR_PIXEL_URL_PATTERN =
-      Pattern.compile("<!\\[CDATA\\[(https?://[^\\]]*.imrworldwide\\.com.*?)\\]\\]>");
-  // extract RAMS pixel
-  public static final Pattern RAMS_PIXEL_URL_PATTERN =
-      Pattern.compile("<!\\[CDATA\\[(https?://[^\\]]*./pixel/v1.*?)\\]\\]>");
-  // extrac DFP pixel
-  public static final Pattern DFP_PIXEL_URL_PATTERN =
-      Pattern.compile("<!\\[CDATA\\[(https://pubads\\.g\\.doubleclick\\.net.*?)\\]\\]>");
 
   public static final String EMPTY_WRAPPER_REDIRECT_URL = EMPTY;
 
   // ad response types
   public static final String TYPE_INLINE_VAST = "INLINE_VAST";
   public static final String TYPE_WRAPPER_VAST = "WRAPPER_VAST";
-  public static final String TYPE_RAMS_EMPTY_VAST = "RAMS_EMPTY_VAST";
   public static final String TYPE_V2_EMPTY_VAST = "V2_EMPTY_VAST";
   public static final String TYPE_V3_EMPTY_VAST = "V3_EMPTY_VAST";
   public static final String TYPE_VMAP = "VMAP";
   public static final String TYPE_OPENRTB_JSON = "OPENRTB_JSON";
   public static final String TYPE_UNKNOWN = "UNKNOWN";
-  public static final String RAMS_IMPRESSION_PIXEL_MACRO = "RAMS_PIXEL";
 
   public static final long DEFAULT_AD_ID = -1L;
   public static final long DEFAULT_CREATIVE_ID = -1L;
@@ -507,7 +492,7 @@ public class VideoAdUtil {
     for (Ad adData : adDataList) {
       if (adData.getContent() != null) {
         // process each ad data, e.g. insert pixels, etc.
-        VastAdProcessor.processSingleAd(adData, pixelMap, trackingEventMap);
+        VastSingleAdProcessor.processSingleAd(adData, pixelMap, trackingEventMap);
         sb.append(adData.getContent());
       }
     }

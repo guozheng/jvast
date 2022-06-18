@@ -30,15 +30,15 @@ import static jvast.util.VideoAdUtil.isWrapper;
 import com.google.common.collect.Multimap;
 import java.util.HashSet;
 import java.util.Set;
-import jvast.data.Ad;
-import jvast.data.Pair;
-import jvast.data.PixelElementType;
-import jvast.data.TrackingEventElementType;
+import jvast.model.Ad;
+import jvast.model.Pair;
+import jvast.model.PixelElementType;
+import jvast.model.TrackingEventElementType;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.util.Strings;
 
-public class VastAdProcessor {
+public class VastSingleAdProcessor {
   private static Set<Pair<String, String>> TRACKING_EVENT_PARENTS = new HashSet<>(4);
 
   static {
@@ -52,15 +52,15 @@ public class VastAdProcessor {
     TRACKING_EVENT_PARENTS.add(new Pair(VAST_COMPANION_ELEMENT_WITH_ATTRS, VAST_COMPANION_ELEMENT_END));
   }
 
-  private static final Logger LOGGER = LogManager.getLogger(VastAdProcessor.class);
+  private static final Logger LOGGER = LogManager.getLogger(VastSingleAdProcessor.class);
 
   /**
    * Update ad data, e.g. insert pixels.
    * //TODO: move all the other vast processing logic here
-   * @param ad               {@link jvast.data.Ad} ad data
+   * @param ad               {@link jvast.model.Ad} ad data
    * @param pixelMap         {@code Multimap<PixelElementType, String>} a multimap of pixels to insert
    * @param trackingEventMap {@code Multimap<TrackingEventElementType, String>} a multimap of tracking events to insert
-   * @return                 {@link jvast.data.Ad} updated ad data
+   * @return                 {@link jvast.model.Ad} updated ad data
    */
   public static Ad processSingleAd(Ad ad,
       Multimap<PixelElementType, String> pixelMap,
@@ -81,7 +81,7 @@ public class VastAdProcessor {
     }
 
     // insert pixels and tracking events
-    insertPixelsAndTrackingEvents(adXml, ad, isInLineVast, pixelMap, trackingEventMap);
+    insertPixelsAndTrackingEvents(adXml, isInLineVast, pixelMap, trackingEventMap);
 
     ad.setContent(adXml); // update adData
     LOGGER.trace("Single ad after processing: {}", adXml);
@@ -91,7 +91,6 @@ public class VastAdProcessor {
 
 
   private static StringBuilder insertPixelsAndTrackingEvents(StringBuilder vastBuilder,
-      final Ad ad,
       boolean isInLineVast,
       Multimap<PixelElementType, String> pixelMap,
       Multimap<TrackingEventElementType, String> trackingEventMap) {

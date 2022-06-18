@@ -1,4 +1,4 @@
-package jvast.data;
+package jvast.model;
 
 import java.util.Objects;
 import lombok.Getter;
