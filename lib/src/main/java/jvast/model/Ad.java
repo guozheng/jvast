@@ -16,7 +16,7 @@ public class Ad {
   private StringBuilder content;
 
   //Ad type that includes template such as VAST, VMAP and version such as 1.0, 2.0, etc.
-  private VideoAdType type;
+  private AdTypeVersion type;
 
   private String adId;
 

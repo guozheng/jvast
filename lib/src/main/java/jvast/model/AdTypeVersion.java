@@ -3,15 +3,31 @@ package jvast.model;
 /**
  * Video ad type that includes template and specification version.
  */
-public enum VideoAdType {
-  UNKNOWN,
-  VAST_2_0,
-  VAST_3_0,
-  VAST_4_0,
-  VAST_4_1,
-  VMAP_1_0;
+public enum AdTypeVersion {
+  UNKNOWN("UNKNOWN", "0.0"),
+  VAST_2_0("VAST", "2.0"),
+  VAST_3_0("VAST", "3.0"),
+  VAST_4_0("VAST", "4.0"),
+  VAST_4_1("VAST", "4.1"),
+  VMAP_1_0("VMAP", "1.0");
 
-  public static VideoAdType fromTypeAndVersion(String type, String version) {
+  private String type;
+  private String version;
+
+  AdTypeVersion(String type, String version) {
+    this.type = type;
+    this.version = version;
+  }
+
+  public String getType() {
+    return type;
+  }
+
+  public String getVersion() {
+    return version;
+  }
+
+  public static AdTypeVersion fromTypeAndVersion(String type, String version) {
     if (type.equalsIgnoreCase("VAST")) {
       switch (version) {
         case "2.0":
@@ -36,4 +52,5 @@ public enum VideoAdType {
       return UNKNOWN;
     }
   }
+
 }

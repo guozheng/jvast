@@ -12,12 +12,11 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.regex.Pattern;
-import jvast.VastSingleAdProcessor;
 import jvast.model.Ad;
+import jvast.model.AdTypeVersion;
 import jvast.model.Pair;
 import jvast.model.PixelElementType;
 import jvast.model.TrackingEventElementType;
-import jvast.model.VideoAdType;
 import lombok.experimental.UtilityClass;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -82,7 +81,7 @@ public class VideoAdUtil {
       + "<VAST version=\"4.2\" xmlns:xs=\"http://www.w3.org/2001/XMLSchema\" xmlns=\"http://www.iab.com/VAST\">";
 
   public static final String VAST_DEFAULT_PREFIX = VAST_V3_PREFIX;
-  private static final String VAST_POSTFIX = "\n</VAST>";
+  public static final String VAST_POSTFIX = "\n</VAST>";
 
   private static final String AD_OPENING_TAG = "<Ad";
   private static final String AD_OPEN_TAG_END = ">";
@@ -246,12 +245,23 @@ public class VideoAdUtil {
   }
 
   /**
+   * Get VAST version.
+   *
+   * @param docBuilder   {@code String} vast doc content string builder
+   * @return             {@code String} vast version
+   */
+  public static String getVastVersion(StringBuilder docBuilder) {
+    String vastTag = StringUtil.getSubString("<VAST", ">", docBuilder, 0, DEFAULT_VAST_VERSION);
+    return StringUtil.getSubString("version=\"", "\"", vastTag, 0, DEFAULT_VAST_VERSION);
+  }
+
+  /**
    * Get video ad type and version.
    *
    * @param adDoc   {@code StringBuilder} ad XML element string builder
-   * @return        {@link VideoAdType}
+   * @return        {@link AdTypeVersion} ad type and version
    */
-  public static VideoAdType getVideoAdType(StringBuilder adDoc) {
+  public static AdTypeVersion getVideoAdType(StringBuilder adDoc) {
     LOGGER.debug("video ad: {}", adDoc);
     String tag = StringUtil.getSubString("<VAST", ">", adDoc, 0, EMPTY);
 
@@ -259,17 +269,17 @@ public class VideoAdUtil {
       //VAST ad
       String version = StringUtil.getSubString("version=\"", "\"", tag, 0, DEFAULT_VAST_VERSION);
       LOGGER.debug("type: VAST, version: {}", version);
-      return VideoAdType.fromTypeAndVersion("VAST", version);
+      return AdTypeVersion.fromTypeAndVersion("VAST", version);
     } else {
       //NOT VAST ad, try VMAP
       tag = StringUtil.getSubString("<vmap:VMAP", ">", adDoc, 0, EMPTY);
       if (tag.equals(EMPTY)) {
         LOGGER.debug("video ad is neither a VAST nor VMAP");
-        return VideoAdType.UNKNOWN;
+        return AdTypeVersion.UNKNOWN;
       } else {
         String version = StringUtil.getSubString("version=\"", "\"", tag, 0, DEFAULT_VMAP_VERSION);
         LOGGER.debug("type: VMAP, version: {}", version);
-        return VideoAdType.fromTypeAndVersion("VMAP", version);
+        return AdTypeVersion.fromTypeAndVersion("VMAP", version);
       }
     }
   }
@@ -433,32 +443,33 @@ public class VideoAdUtil {
    * @return                  {@code List<Ad>} a list of {@link Ad}
    */
   public static List<Ad> splitVastDoc(String vastDoc) {
+    return splitVastDoc(new StringBuilder(vastDoc));
+  }
+
+  public static List<Ad> splitVastDoc(StringBuilder sb) {
     List<Ad> ads = new LinkedList<>();
 
-    int startIndex = vastDoc.indexOf(AD_OPENING_TAG);
+    int startIndex = sb.indexOf(AD_OPENING_TAG);
 
     StringBuilder adElement; // each Ad xml element including open and close XML tags
     String adId;
     List<String> creativeIds;
 
-    final String vastVersion = VideoAdUtil.getVastVersion(vastDoc);
-
-    while (startIndex < vastDoc.length() && startIndex != -1) {
-      int adClosingIndex = vastDoc.indexOf(AD_CLOSING_TAG, startIndex);
+    while (startIndex < sb.length() && startIndex != -1) {
+      int adClosingIndex = sb.indexOf(AD_CLOSING_TAG, startIndex);
       if (adClosingIndex == -1) {
         LOGGER.debug("vast doc has no more ad element, done parsing vast doc");
         break;
       }
 
       // process each <Ad> element, convert each <Ad> element into one AdData object
-      adElement = new StringBuilder(vastDoc.substring(startIndex, adClosingIndex + AD_CLOSING_TAG.length()));
+      adElement = new StringBuilder(sb.substring(startIndex, adClosingIndex + AD_CLOSING_TAG.length()));
       // update start index to get the next Ad element
-      startIndex = vastDoc.indexOf(AD_OPENING_TAG, adClosingIndex + AD_CLOSING_TAG.length());
+      startIndex = sb.indexOf(AD_OPENING_TAG, adClosingIndex + AD_CLOSING_TAG.length());
 
       adId = getAdId(adElement);
       creativeIds = getCreativeIds(adElement);
 
-      //TODO: add priority, advertiserDomains, campaignId
       Ad ad = Ad.builder()
           .content(adElement)
           .adId(adId)
@@ -472,36 +483,6 @@ public class VideoAdUtil {
     return ads;
   }
 
-
-  /**
-   * Build a multi ad VAST doc from a list of {@link Ad}. Vast version is from the max version.
-   *
-   * @param adDataList                {@code List<Ad>} a list of {@link Ad}
-   * @param pixelMap                  {@code Multimap<PixelElementType, String>} a multimap of pixels to insert
-   * @param trackingEventMap          {@code Multimap<TrackingEventElementType, String>} a multimap of tracking events to insert
-   * @return                          {@code String} vast doc
-   */
-  public static String buildVastDoc(List<Ad> adDataList,
-      Multimap<PixelElementType, String> pixelMap,
-      Multimap<TrackingEventElementType, String> trackingEventMap) {
-
-    String maxVersion = "2.0";
-    StringBuilder sb = new StringBuilder();
-
-    // iterate through ad data list, find the max version
-    for (Ad adData : adDataList) {
-      if (adData.getContent() != null) {
-        // process each ad data, e.g. insert pixels, etc.
-        VastSingleAdProcessor.processSingleAd(adData, pixelMap, trackingEventMap);
-        sb.append(adData.getContent());
-      }
-    }
-
-    sb.append(VAST_POSTFIX); // add postfix
-    sb.insert(0, getVastPrefix(maxVersion)); // prepend prefix
-
-    return sb.toString();
-  }
 
   /**
    * Get a matching vast prefix given the version.
