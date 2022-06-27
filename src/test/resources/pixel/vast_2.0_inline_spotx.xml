@@ -1,0 +1,120 @@
+<VAST version="2.0">
+  <Ad id="bf9aee2713be152529c835923d922451-2866401828">
+    <InLine>
+      <AdSystem version="1.0">SpotXchange</AdSystem>
+      <AdTitle>
+        <![CDATA[1 Main Testing 85394 Hosted Creative]]>
+      </AdTitle>
+      <Description>
+        <![CDATA[]]>
+      </Description>
+      <Error>
+        <![CDATA[https://search.spotxchange.com/exception?_a=85394&_p=2866401828&_z=1&_m=eNpdkFtPwjAUx%2FtZ%2Bky2nl52S3wTEwxCjOIysoR0a5cBG1tGJyjy2bUOb7GX8%2FD7nzt3CEEIgUcFED8QPqKhJ7iWUknwAXQW5jIHjxWZDhkhBFAgWMjR4sEGCYcy%2B7j9KOt3qtKR63bNtncOWppSd7Jt0WwxnSJfhJyi9%2BFcyGBgQAhCSo5AAmLBCSv9vM61eWk1jrCPzxYVjc2OI9P1eoSVNBJHJ3ypuNqbptN9V1nn0pg2St3UzUu52%2BlqkJyhobypU1dpI9fVPnUBiBCp%2B9slHmFrV18p17YWZpR7jHFmpR%2B8KuW%2BtJoqOM3Ak8oLQBISUOZp4Weh5ETlPui%2FMdb930rw%2Bfw9%2Fuclb%2FN4wpN6fJg%2FTg6z%2BrZK6tn2Lr7ZLjdjtry%2BPyabpzqJJ6%2FzeHH1AcFKiJc%3D&_l=eNp1Tk1Pg0AQ3d%2ByZyX7CUsTbxqjKTSmYsULWZZBsdBuKGhp7X93sReMcSbzMvPem8lQRJF0RdEITGnfE6IIhCf8nP8lkiUiqABdO%2FcRczw74rwq8AxLj9xcSnyBrR62fTdldhY2vy19Xlcmg71505tXyEoAJxOPuHCy6VvdQZE1ul1DZ2tt4F%2BvbaGp%2BmakM2ObUcKnE4qT%2BfwM7s%2Bl3XbP53W0c%2F3e6z4QpYoLUFqzMghKSbUUAIRwoQJeqDJESgo5ufMDgQwFm8zEJZWhT5EiSqKv6LBm6eMdjQ9miFlKo%2Fe6WtwmPGZPzWKVfEbNfZ2yaHi5frj6Bq%2BZZk0%3D&_t=eNo9TstqwzAQ1LfobILkJzb0VgiByL00Le5FyPK6USpbwlKD3TT%2FXqsJ2cvszOwMC7ME65UZUVzmRUqytBO0oBTaUgpJ86RvoUwIIRTJo1AjMtOnGJVE8AhecAtCmpH7xQKu8MPBEbZaLF4NQabZhhTl2rTKZ9WB4WehVcd7NTnP%2B0n8X62m6LhbnIcBVxc8%2BTaA1ApGz92awxW5XiPsQEzyyJ0FGQ6sCAUeJhdYB2clIWww%2BwDOGj%2Fzm8yFtfdfx2%2Bt167BdKBvLMLG3fV1EKIbQlB92O8Rzcqc%2FrLtLq6HQ%2FLy3qTs9KabmNH6VS5sy9J6aJb6%2BStjPx%2BanXZPf5AWc5g%3D&_b=eNozZfAL9fFBI2r8QzxNolwiK%2FxDkkF0VZS7W5ZfladJZJavkV94VK6%2Fi6exX4hTpr97qC0AcfcToA%3D%3D&beacon_type=exception&exception%5Bid%5D=%24EXCEPTION_ID&exception%5Bdata%5D=%24EXCEPTION_DATA&exception%5Btrace%5D=%24EXCEPTION_TRACE&syn%5Btiming%5D=%24TIMING_DATA]]>
+      </Error>
+      <Impression>
+        <![CDATA[https://den01-event.spotxchange.com/vast/impression?_x=WzE2MjUxMDc4NTcsIjI5NjU0ZWFhZGExNzExZWI5Y2FjMTYzZmJlOTMwMDAxIiwiODUzOTQiLCIxMjhhNi40NGQ3NC40NmIzIiwiODU0NSIsIjEyOGE2LjQ0ZDc0LjQ2YjMiLCJiZjlhZWUyNzEzYmUxNTI1MjljODM1OTIzZDkyMjQ1MSIsImNlODI5MjY3LWM4MjQtMTFlYi1iYTJkLTFmNDU0OTcyMDAwMSIsdHJ1ZSxudWxsLFsiNzU5NDIiLCI4NTM5NCIsIjg1NDUiLCIiLCJyb2t1LndlYXRoZXJhcHAiLDIyMyxbInNwb3R4LnR2Il0sNTAwLDUwMCw1MDAsNTAwLDBdLDUwMCwiTCIsIjI5Njc0MDU0ZGExNzExZWI5Y2FjMTYzZmJlOTMwMDAxIixudWxsLG51bGxdJnNldGVjPU1URXdObVUxWVRCbFlqTmxNREU1TUdVMU1EQmxOR00xWlRoaVkyWTBaRGs9]]>
+      </Impression>
+      <Impression>
+        <![CDATA[https://den01-search.spotxchange.com/beacon?_a=85394&_p=2866401828&_z=1&_m=eNpdkFtPwjAUx%2FtZ%2Bky2nl52S3wTEwxCjOIysoR0a5cBG1tGJyjy2bUOb7GX8%2FD7nzt3CEEIgUcFED8QPqKhJ7iWUknwAXQW5jIHjxWZDhkhBFAgWMjR4sEGCYcy%2B7j9KOt3qtKR63bNtncOWppSd7Jt0WwxnSJfhJyi9%2BFcyGBgQAhCSo5AAmLBCSv9vM61eWk1jrCPzxYVjc2OI9P1eoSVNBJHJ3ypuNqbptN9V1nn0pg2St3UzUu52%2BlqkJyhobypU1dpI9fVPnUBiBCp%2B9slHmFrV18p17YWZpR7jHFmpR%2B8KuW%2BtJoqOM3Ak8oLQBISUOZp4Weh5ETlPui%2FMdb930rw%2Bfw9%2Fuclb%2FN4wpN6fJg%2FTg6z%2BrZK6tn2Lr7ZLjdjtry%2BPyabpzqJJ6%2FzeHH1AcFKiJc%3D&_l=eNp1Tk1Pg0AQ3d%2ByZyX7CUsTbxqjKTSmYsULWZZBsdBuKGhp7X93sReMcSbzMvPem8lQRJF0RdEITGnfE6IIhCf8nP8lkiUiqABdO%2FcRczw74rwq8AxLj9xcSnyBrR62fTdldhY2vy19Xlcmg71505tXyEoAJxOPuHCy6VvdQZE1ul1DZ2tt4F%2BvbaGp%2BmakM2ObUcKnE4qT%2BfwM7s%2Bl3XbP53W0c%2F3e6z4QpYoLUFqzMghKSbUUAIRwoQJeqDJESgo5ufMDgQwFm8zEJZWhT5EiSqKv6LBm6eMdjQ9miFlKo%2Fe6WtwmPGZPzWKVfEbNfZ2yaHi5frj6Bq%2BZZk0%3D&_t=eNotTkFqwzAQ1Ft0DkGyYxsr5FBICTnYhZK24ItYy4ojkC0hqSFO6r%2FXarqXmZ2dGbaVIMyIkjIvNiTbdEALSmVbChA0T8%2BtLFNCCEXiAmpExvUwKoHaZ%2BqBn4SHyUrMsA%2FgAl5hq2EKaogSzdakKJeKRb6qThp%2BBa06flbOB3528OdajtBxP%2FkgB8we2IU2gtBKjoH7JYcZmecV9hKcuHBvpYgGC7EgSOfj1smrEjIyeQsRvDXhxp8yB2v%2F%2F0yWosF0UmNWrLBZsjSfl0GIrglBwBL28KxgWJjvMbgJbxVLknTrWc5wr00LOkpkOyOalTn9qe%2BfqhreL9Wpn5qv41Qnx7Q59ffq%2FpI1%2Bw%2F6dnhN60Oj6321%2BwUu9ncK&_b=eNozYPAL9fFBI2r8qiINfbNCDSOr%2FHJ8s7IrI41CTXyNIk0jQ5LLI7MCjf3cA6v8w8OyfXMDbQF9gxRO&beacon_type=start&aid=ce829267-c824-11eb-ba2d-1f4549720001&syn%5Btiming%5D=%24TIMING_DATA]]>
+      </Impression>
+      <Impression>
+        <![CDATA[https://cdn.spotxcdn.com/website/integration_test/beacons/tracking.html?vast_impression]]>
+      </Impression>
+      <Impression>
+        <![CDATA[https://cdn.spotxcdn.com/website/integration_test/beacons/tracking.html?vast_start]]>
+      </Impression>
+      <Impression>
+        <![CDATA[https://sb.scorecardresearch.com/b?c1=1&c2=6272977&c3=85394&cv=1.3&cj=1]]>
+      </Impression>
+      <Impression>
+        <![CDATA[https://sb.scorecardresearch.com/p?c1=2&c2=6272977&ns_ap_sv=2.1511.10&ns_type=hidden&ns_st_it=a&ns_st_sv=4.0.0&ns_st_ad=1&ns_st_sq=1&ns_st_id=1625107857868250&ns_st_ec=1&ns_st_cn=1&ns_st_ev=play&ns_st_ct=va&ns_st_cl=0&ns_st_pt=0&c3=85394&c4=2866401828&c6=8545&ns_ts=1625107857868250]]>
+      </Impression>
+      <Impression>
+        <![CDATA[https://tps30.doubleverify.com/visit.jpg?ctx=484047&cmp=2228897&sid=593588&plc=iqmapp&num=&adid=&advid=484048&adsrv=15&tagtype=&dvtagver=6.1.img&DVP_CHANNELID=85394&DVP_DEALID=2866401828&DVP_CMPID=2866401828&turl=https%3A%2F%2Fpublishername.com%2Fappname&DVPX_SX_UID=ce829267-c824-11eb-ba2d-1f4549720001&DVPX_SX_MID=29654eaada1711eb9cac163fbe930001&DVPX_IP=165.23.234.23&DVPX_UA=Roku%2FDVP-7.10%2520%28047.10E04062A%29%5D&DVP_DEVICETYPE=7&DVP_BUNDLE=roku.weatherapp&DVP_MAKE=Roku&DVP_MODEL=Digital+Video+player&DVP_OS=16&DVP_OSV=7.10&DVP_APPNAME=myctvapp&DVPX_STOREURL=http%3A%2F%2Fchannelstore.roku.com%2Fdetails%2F11055%2Fweatherapp&DVP_PUBLISHERID=75942&DVP_PUBNAME=cjohnson]]>
+      </Impression>
+      <Creatives>
+        <Creative sequence="1">
+          <Linear>
+            <Duration>00:00:15</Duration>
+            <TrackingEvents>
+              <Tracking event="complete">
+                <![CDATA[https://event.spotxchange.com/vast/complete?_x=WzE2MjUxMDc4NTcsIjI5NjU0ZWFhZGExNzExZWI5Y2FjMTYzZmJlOTMwMDAxIiwiODUzOTQiLCIxMjhhNi40NGQ3NC40NmIzIiwiODU0NSIsIjEyOGE2LjQ0ZDc0LjQ2YjMiLCJiZjlhZWUyNzEzYmUxNTI1MjljODM1OTIzZDkyMjQ1MSIsImNlODI5MjY3LWM4MjQtMTFlYi1iYTJkLTFmNDU0OTcyMDAwMSIsdHJ1ZSxudWxsLFsiNzU5NDIiLCI4NTM5NCIsIjg1NDUiLCIiLCJyb2t1LndlYXRoZXJhcHAiLDIyMyxbInNwb3R4LnR2Il0sNTAwLDUwMCw1MDAsNTAwLDBdLDUwMCwiTCIsIjI5Njc0MDU0ZGExNzExZWI5Y2FjMTYzZmJlOTMwMDAxIixudWxsLG51bGxdJnNldGVjPU1URXdObVUxWVRCbFlqTmxNREU1TUdVMU1EQmxOR00xWlRoaVkyWTBaRGs9]]>
+              </Tracking>
+              <Tracking event="firstQuartile">
+                <![CDATA[https://event.spotxchange.com/vast/25?_x=WzE2MjUxMDc4NTcsIjI5NjU0ZWFhZGExNzExZWI5Y2FjMTYzZmJlOTMwMDAxIiwiODUzOTQiLCIxMjhhNi40NGQ3NC40NmIzIiwiODU0NSIsIjEyOGE2LjQ0ZDc0LjQ2YjMiLCJiZjlhZWUyNzEzYmUxNTI1MjljODM1OTIzZDkyMjQ1MSIsIjI5Njc0MDU0ZGExNzExZWI5Y2FjMTYzZmJlOTMwMDAxIixudWxsLG51bGxdJnNldGVjPU1tTmtNV000WmpNNE9EWmxaalE0TkRjek9UQmtNRFpsT1Rrd1l6WTVZV1E9]]>
+              </Tracking>
+              <Tracking event="midpoint">
+                <![CDATA[https://event.spotxchange.com/vast/50?_x=WzE2MjUxMDc4NTcsIjI5NjU0ZWFhZGExNzExZWI5Y2FjMTYzZmJlOTMwMDAxIiwiODUzOTQiLCIxMjhhNi40NGQ3NC40NmIzIiwiODU0NSIsIjEyOGE2LjQ0ZDc0LjQ2YjMiLCJiZjlhZWUyNzEzYmUxNTI1MjljODM1OTIzZDkyMjQ1MSIsIjI5Njc0MDU0ZGExNzExZWI5Y2FjMTYzZmJlOTMwMDAxIixudWxsLG51bGxdJnNldGVjPU1tTmtNV000WmpNNE9EWmxaalE0TkRjek9UQmtNRFpsT1Rrd1l6WTVZV1E9]]>
+              </Tracking>
+              <Tracking event="thirdQuartile">
+                <![CDATA[https://event.spotxchange.com/vast/75?_x=WzE2MjUxMDc4NTcsIjI5NjU0ZWFhZGExNzExZWI5Y2FjMTYzZmJlOTMwMDAxIiwiODUzOTQiLCIxMjhhNi40NGQ3NC40NmIzIiwiODU0NSIsIjEyOGE2LjQ0ZDc0LjQ2YjMiLCJiZjlhZWUyNzEzYmUxNTI1MjljODM1OTIzZDkyMjQ1MSIsIjI5Njc0MDU0ZGExNzExZWI5Y2FjMTYzZmJlOTMwMDAxIixudWxsLG51bGxdJnNldGVjPU1tTmtNV000WmpNNE9EWmxaalE0TkRjek9UQmtNRFpsT1Rrd1l6WTVZV1E9]]>
+              </Tracking>
+              <Tracking event="thirdQuartile">
+                <![CDATA[https://search.spotxchange.com/beacon?_a=85394&_p=2866401828&_z=1&_m=eNpNT9tqwkAQ3W%2FZZzGz11ygD4XiQzEptIokBGSTXUliNCFuetH662239oJnYB7OOTNnhk8BEEJEUkHAD4SPaCgFN0ppRXxCTBGWqiSSbQoTMgAgKBAs5Gj55MaQL0JO0ccFKFnO5z%2BNoE8HREIKrwQCcMQJa%2FNcl8a%2B9QZH2MdnR226ca9xZIfRTLBWVuHohAvHtWZ9sN1gxqF15sraPsq93Csrtd%2Bb9iJNh247Tstul3vaWFW3h9wjBITIvRejbGUG1fd4gl1f%2F66sXRZmlEvGOHPSP72u1KFymt5wWhCptAyIAggok0b4Rag46NIn5nrG2S8XXIWdz3%2Fvfxe8x819k9BZna2SNlvEx7S5hZTGx5hm23T3uM0WyS67mzUPq%2FTmC8wwezQ%3D&_l=eNp1j09PwzAMxf1ZcoYq6ZKum8RhSL2gtQegSDlVaWKgaTKi0kr7w747KRzYDlj2k%2Fx%2B72AzYCDiMIhNgaW5yhLOzZInPGsXUD9F16ByEZ%2FIgqxPpO0MWROR0OJWkBsS1OFjGi%2Bdz4C768jUuk43uNfvaveGzStixDShsSLW06BGNI1XQ49jcErjv9kwoO8mP9uNDn5G5HyGqt5uf2X%2BBOLNf86PLMWKpxc7nZ8Vq4xBTnMBX9Wx52X64ipr%2BjItaGmLvTzWB%2Fn84KTdMGnvnfSPrrSbu29bYVJk&_t=eNotjs1qwzAQhPUsOpsgNXGCDb0VTEpICLgp0UXI8tpRK9tCUn7cNO9eqc5eZufb3WErEHLo0Uu2XC1IuqgFXVEKVSaFpMt5U0E2J4RQJE9C9WiwreiVRNV0dcdTw%2F1oAOfYgjxbq%2FoWJ9hoMXrVRUzTGVllISbgi6ph4BehVc0bZZ3njRX%2FW2Eoau5G56HD%2BR1bX0WRWkHvuQt3OCePR4IdCCtP3BmQccGIGODBuuhquCgJsYObj%2BLM4G98wlwY8%2Fy1P2sdsrqhBj25BA%2FuyUMhRGeEoO3HZoNomi3p765YX1nxrrdvxyv72o%2BsZN2xbFNW7H9YmO3Kg96Wh2%2F2uX79AwhzcdA%3D&_b=eNozYfAL9fFBI2r8w12NI3N9TfyyHE39QzKyorIcDfxcko19qxxNfF2CsiOznDL9XPyyfatCbQFnrxOe&beacon_type=recurring&view_percent=75]]>
+              </Tracking>
+              <Tracking event="midpoint">
+                <![CDATA[https://search.spotxchange.com/beacon?_a=85394&_p=2866401828&_z=1&_m=eNpNT9tqwkAQ3W%2FZZzGz11ygD4XiQzEptIokBGSTXUliNCFuetH662239oJnYB7OOTNnhk8BEEJEUkHAD4SPaCgFN0ppRXxCTBGWqiSSbQoTMgAgKBAs5Gj55MaQL0JO0ccFKFnO5z%2BNoE8HREIKrwQCcMQJa%2FNcl8a%2B9QZH2MdnR226ca9xZIfRTLBWVuHohAvHtWZ9sN1gxqF15sraPsq93Csrtd%2Bb9iJNh247Tstul3vaWFW3h9wjBITIvRejbGUG1fd4gl1f%2F66sXRZmlEvGOHPSP72u1KFymt5wWhCptAyIAggok0b4Rag46NIn5nrG2S8XXIWdz3%2Fvfxe8x819k9BZna2SNlvEx7S5hZTGx5hm23T3uM0WyS67mzUPq%2FTmC8wwezQ%3D&_l=eNp1j09PwzAMxf1ZcoYq6ZKum8RhSL2gtQegSDlVaWKgaTKi0kr7w747KRzYDlj2k%2Fx%2B72AzYCDiMIhNgaW5yhLOzZInPGsXUD9F16ByEZ%2FIgqxPpO0MWROR0OJWkBsS1OFjGi%2Bdz4C768jUuk43uNfvaveGzStixDShsSLW06BGNI1XQ49jcErjv9kwoO8mP9uNDn5G5HyGqt5uf2X%2BBOLNf86PLMWKpxc7nZ8Vq4xBTnMBX9Wx52X64ipr%2BjItaGmLvTzWB%2Fn84KTdMGnvnfSPrrSbu29bYVJk&_t=eNotjs1qwzAQhPUsOpsgNXGCDb0VTEpICLgp0UXI8tpRK9tCUn7cNO9eqc5eZufb3WErEHLo0Uu2XC1IuqgFXVEKVSaFpMt5U0E2J4RQJE9C9WiwreiVRNV0dcdTw%2F1oAOfYgjxbq%2FoWJ9hoMXrVRUzTGVllISbgi6ph4BehVc0bZZ3njRX%2FW2Eoau5G56HD%2BR1bX0WRWkHvuQt3OCePR4IdCCtP3BmQccGIGODBuuhquCgJsYObj%2BLM4G98wlwY8%2Fy1P2sdsrqhBj25BA%2FuyUMhRGeEoO3HZoNomi3p765YX1nxrrdvxyv72o%2BsZN2xbFNW7H9YmO3Kg96Wh2%2F2uX79AwhzcdA%3D&_b=eNozZvAL9fFBI2r8srJN%2FENcjf1cnHIjQ6Jyo3J9q6LC%2FbJ9XVwrfKu8cn1dQg0ic%2F2AMNQWAHwnFGs%3D&beacon_type=recurring&view_percent=50]]>
+              </Tracking>
+              <Tracking event="firstQuartile">
+                <![CDATA[https://search.spotxchange.com/beacon?_a=85394&_p=2866401828&_z=1&_m=eNpNT9tqwkAQ3W%2FZZzGz11ygD4XiQzEptIokBGSTXUliNCFuetH662239oJnYB7OOTNnhk8BEEJEUkHAD4SPaCgFN0ppRXxCTBGWqiSSbQoTMgAgKBAs5Gj55MaQL0JO0ccFKFnO5z%2BNoE8HREIKrwQCcMQJa%2FNcl8a%2B9QZH2MdnR226ca9xZIfRTLBWVuHohAvHtWZ9sN1gxqF15sraPsq93Csrtd%2Bb9iJNh247Tstul3vaWFW3h9wjBITIvRejbGUG1fd4gl1f%2F66sXRZmlEvGOHPSP72u1KFymt5wWhCptAyIAggok0b4Rag46NIn5nrG2S8XXIWdz3%2Fvfxe8x819k9BZna2SNlvEx7S5hZTGx5hm23T3uM0WyS67mzUPq%2FTmC8wwezQ%3D&_l=eNp1j09PwzAMxf1ZcoYq6ZKum8RhSL2gtQegSDlVaWKgaTKi0kr7w747KRzYDlj2k%2Fx%2B72AzYCDiMIhNgaW5yhLOzZInPGsXUD9F16ByEZ%2FIgqxPpO0MWROR0OJWkBsS1OFjGi%2Bdz4C768jUuk43uNfvaveGzStixDShsSLW06BGNI1XQ49jcErjv9kwoO8mP9uNDn5G5HyGqt5uf2X%2BBOLNf86PLMWKpxc7nZ8Vq4xBTnMBX9Wx52X64ipr%2BjItaGmLvTzWB%2Fn84KTdMGnvnfSPrrSbu29bYVJk&_t=eNotjs1qwzAQhPUsOpsgNXGCDb0VTEpICLgp0UXI8tpRK9tCUn7cNO9eqc5eZufb3WErEHLo0Uu2XC1IuqgFXVEKVSaFpMt5U0E2J4RQJE9C9WiwreiVRNV0dcdTw%2F1oAOfYgjxbq%2FoWJ9hoMXrVRUzTGVllISbgi6ph4BehVc0bZZ3njRX%2FW2Eoau5G56HD%2BR1bX0WRWkHvuQt3OCePR4IdCCtP3BmQccGIGODBuuhquCgJsYObj%2BLM4G98wlwY8%2Fy1P2sdsrqhBj25BA%2FuyUMhRGeEoO3HZoNomi3p765YX1nxrrdvxyv72o%2BsZN2xbFNW7H9YmO3Kg96Wh2%2F2uX79AwhzcdA%3D&_b=eNozYvAL9fFBI2p8qxwNIrOyK6JCUnL8XUIr%2FEIyMiOz0iv83X0rfLOyTX2rko38XVwrIqsibQGT7hUz&beacon_type=recurring&view_percent=25]]>
+              </Tracking>
+              <Tracking event="complete">
+                <![CDATA[https://search.spotxchange.com/beacon?_a=85394&_p=2866401828&_z=1&_m=eNpNT9tqwkAQ3W%2FZZzGz11ygD4XiQzEptIokBGSTXUliNCFuetH662239oJnYB7OOTNnhk8BEEJEUkHAD4SPaCgFN0ppRXxCTBGWqiSSbQoTMgAgKBAs5Gj55MaQL0JO0ccFKFnO5z%2BNoE8HREIKrwQCcMQJa%2FNcl8a%2B9QZH2MdnR226ca9xZIfRTLBWVuHohAvHtWZ9sN1gxqF15sraPsq93Csrtd%2Bb9iJNh247Tstul3vaWFW3h9wjBITIvRejbGUG1fd4gl1f%2F66sXRZmlEvGOHPSP72u1KFymt5wWhCptAyIAggok0b4Rag46NIn5nrG2S8XXIWdz3%2Fvfxe8x819k9BZna2SNlvEx7S5hZTGx5hm23T3uM0WyS67mzUPq%2FTmC8wwezQ%3D&_l=eNp1j09PwzAMxf1ZcoYq6ZKum8RhSL2gtQegSDlVaWKgaTKi0kr7w747KRzYDlj2k%2Fx%2B72AzYCDiMIhNgaW5yhLOzZInPGsXUD9F16ByEZ%2FIgqxPpO0MWROR0OJWkBsS1OFjGi%2Bdz4C768jUuk43uNfvaveGzStixDShsSLW06BGNI1XQ49jcErjv9kwoO8mP9uNDn5G5HyGqt5uf2X%2BBOLNf86PLMWKpxc7nZ8Vq4xBTnMBX9Wx52X64ipr%2BjItaGmLvTzWB%2Fn84KTdMGnvnfSPrrSbu29bYVJk&_t=eNotTstugzAQ9Lf4HEV2w0Mg9RApPVQKqRIRRXCxjFmKK4Mt7NKQNP9eXLKXeezOaCvgQvfoJYnigIRBzWlMKVSJ4IJGm6aCZEMIoUi0XPZID5%2B8lwJVS%2BqOF8LcZACnWOjOKHCAV9goPjnZeZeGaxInc8tsj7IGzUauZM0aOVjHmoH%2FX81LXjM7WQcdTu94cJUHoST0jtk5h1PyeKywBT6IllkDwh8Y7gscDNarGkYpwDO4Og%2FWaHdli824Mc9X%2B2%2Bl5q5O16AWtcLaPv15EKJrQtDhvN8jGiYR%2FS0upzbLj2F5OdMyP3XF7fhT5oevbPcelLvtVHTZlN1E%2BJG%2Fvf4BaPZw3Q%3D%3D&_b=eNozZPAL9fFBI2ois8Iy%2FN2DcvyqPCsjq7KN%2FKqSjaNy3TKjXMIy%2FLKyTfyyXMsjszyNfLN8bQGSHxTj&beacon_type=complete]]>
+              </Tracking>
+              <Tracking event="firstQuartile">
+                <![CDATA[https://cdn.spotxcdn.com/website/integration_test/beacons/tracking.html?vast_firstQuartile]]>
+              </Tracking>
+              <Tracking event="midpoint">
+                <![CDATA[https://cdn.spotxcdn.com/website/integration_test/beacons/tracking.html?vast_midpoint]]>
+              </Tracking>
+              <Tracking event="thirdQuartile">
+                <![CDATA[https://cdn.spotxcdn.com/website/integration_test/beacons/tracking.html?vast_thirdQuartile]]>
+              </Tracking>
+              <Tracking event="complete">
+                <![CDATA[https://cdn.spotxcdn.com/website/integration_test/beacons/tracking.html?vast_complete]]>
+              </Tracking>
+              <Tracking event="complete">
+                <![CDATA[https://sb.scorecardresearch.com/p?c1=2&c2=6272977&ns_ap_sv=2.1511.10&ns_type=hidden&ns_st_it=a&ns_st_sv=4.0.0&ns_st_ad=1&ns_st_sq=1&ns_st_id=1625107857868250&ns_st_ec=2&ns_st_cn=1&ns_st_ev=end&ns_st_ct=va&ns_st_cl=0&ns_st_pt=0&c3=85394&c4=2866401828&c6=8545&ns_ts=1625107857868250]]>
+              </Tracking>
+            </TrackingEvents>
+            <VideoClicks>
+              <ClickThrough>
+                <![CDATA[https://www.spotx.tv]]>
+              </ClickThrough>
+              <ClickTracking>
+                <![CDATA[https://search.spotxchange.com/click?_a=85394&_p=2866401828&_z=1&_m=eNpdkFtPwjAUx%2FtZ%2Bky2nl52S3wTEwxCjOIysoR0a5cBG1tGJyjy2bUOb7GX8%2FD7nzt3CEEIgUcFED8QPqKhJ7iWUknwAXQW5jIHjxWZDhkhBFAgWMjR4sEGCYcy%2B7j9KOt3qtKR63bNtncOWppSd7Jt0WwxnSJfhJyi9%2BFcyGBgQAhCSo5AAmLBCSv9vM61eWk1jrCPzxYVjc2OI9P1eoSVNBJHJ3ypuNqbptN9V1nn0pg2St3UzUu52%2BlqkJyhobypU1dpI9fVPnUBiBCp%2B9slHmFrV18p17YWZpR7jHFmpR%2B8KuW%2BtJoqOM3Ak8oLQBISUOZp4Weh5ETlPui%2FMdb930rw%2Bfw9%2Fuclb%2FN4wpN6fJg%2FTg6z%2BrZK6tn2Lr7ZLjdjtry%2BPyabpzqJJ6%2FzeHH1AcFKiJc%3D&_l=eNp1Tk1Pg0AQ3d%2ByZyX7CUsTbxqjKTSmYsULWZZBsdBuKGhp7X93sReMcSbzMvPem8lQRJF0RdEITGnfE6IIhCf8nP8lkiUiqABdO%2FcRczw74rwq8AxLj9xcSnyBrR62fTdldhY2vy19Xlcmg71505tXyEoAJxOPuHCy6VvdQZE1ul1DZ2tt4F%2BvbaGp%2BmakM2ObUcKnE4qT%2BfwM7s%2Bl3XbP53W0c%2F3e6z4QpYoLUFqzMghKSbUUAIRwoQJeqDJESgo5ufMDgQwFm8zEJZWhT5EiSqKv6LBm6eMdjQ9miFlKo%2Fe6WtwmPGZPzWKVfEbNfZ2yaHi5frj6Bq%2BZZk0%3D&_t=eNotj1tv3CAQhf1beI5SwHdWfalSVX1wbkoVJapkjWFs47WNBeSyu93%2FHkjKy3A%2BZs4c5KzlPuF1UWY0zxSwkjHsagmSFWnfYZ1SSlkiR9BrYuwAq5bJq1ZoWvk5eiILKg2tVkQQ6KDoi4JXWPGSVR2kKeNU9bSsaI5dTy5Ib%2BwCPvQ2t1mQ3sLqpFF6HQIb9TAGuOgFW3%2FYMKDPXX%2B%2FLVvs3mY4%2BPAYOMsvaVmHcNFTz%2Bj0MeKgOh1MfRQ8pVWWpYG9aeXHQOo89o8Y9sQMeRaldq3zFmFpX%2Bz85eEQrBxbt6Ek4kQ2sLCgR%2BuiUviqJcYbvvtY3Gb8e%2FuFW9i2%2F9n5OXzFKAye5QUxYZYV53CShF1SmoDg4uREKYg0L6u3B7LTgvN050QhyDCbDuaI6O6csLwu2L%2Bn6e7QTD%2Ffbq5%2BTM3VHbv%2Bdb%2B%2FPt6PzcOsnx7%2FsGYajs%2FTnjYPv79%2FAG3qkjc%3D&_b=eNozYGDwC%2FXxYTCyNDM3Mbc0TUk0NDc0TE2yTE5MNjQzTktKtTR2AwKwqhq%2FrEAD%2F%2FDA8qgsrwy%2FqnTDyCpfQ78sV5PIrKiMyKzQisgsx4qoXL9coLgtAFvOG0Q%3D&daid=bf9aee2713be152529c835923d922451]]>
+              </ClickTracking>
+              <ClickTracking>
+                <![CDATA[https://cdn.spotxcdn.com/website/integration_test/beacons/tracking.html?vast_VideoClickTracking]]>
+              </ClickTracking>
+            </VideoClicks>
+            <MediaFiles>
+              <MediaFile delivery="progressive" type="video/mp4" bitrate="2254" width="950" height="540">
+                <![CDATA[https://cdn.spotxcdn.com/media/videos/orig/a/b/aba6f6628e82718ba33120df07805ebf.mp4]]>
+              </MediaFile>
+            </MediaFiles>
+          </Linear>
+        </Creative>
+      </Creatives>
+      <Extensions>
+        <Extension type="LR-Pricing">
+          <Price model="CPM" currency="USD" source="spotxchange">
+            <![CDATA[0.05]]>
+          </Price>
+        </Extension>
+        <Extension type="SpotX-Count">
+          <total_available>
+            <![CDATA[1]]>
+          </total_available>
+        </Extension>
+        <Extension type="Spotx-Regs">
+          <GDPR>0</GDPR>
+        </Extension>
+        <Extension type="Spotx-User">
+          <consent>2</consent>
+        </Extension>
+      </Extensions>
+    </InLine>
+  </Ad>
+</VAST>
+

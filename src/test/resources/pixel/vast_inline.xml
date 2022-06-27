@@ -1,0 +1,59 @@
+<VAST version="2.0">
+  <Ad id="1234">
+    <InLine>
+      <AdSystem>Innovid Ads</AdSystem>
+      <AdTitle>
+        <![CDATA[BABY SHOWER 30 QNAM1552000 STEREO HULU (2)]]>
+      </AdTitle>
+      <Impression>
+        <![CDATA[https://s.innovid.com/1x1.gif?project_hash=1h9orr&client_id=1779&video_id=340824&channel_id=1013432&publisher_id=1460&placement_tag_id=0&project_state=2&r=1539971036953&placement_hash=1fjddg&action=init]]>
+      </Impression>
+      <Creatives>
+        <Creative id="138250360642" sequence="1">
+          <Linear>
+            <Duration>00:00:30</Duration>
+            <TrackingEvents>
+              <Tracking event="start">
+                <![CDATA[https://s.innovid.com/1x1.gif?project_hash=1h9orr&client_id=1779&video_id=340824&channel_id=1013432&publisher_id=1460&placement_tag_id=0&project_state=2&r=1539971036953&placement_hash=1fjddg&action=play]]>
+              </Tracking>
+              <Tracking event="start">
+                <![CDATA[https://tag.researchnow.com/t/beacon?adn=8&ca=48502&cr=340824&ord=1539971036953&pl=1027011&pr=12013&si=1460&did={ivc_deviceid_raw}]]>
+              </Tracking>
+              <Tracking event="start">
+                <![CDATA[https://ad.doubleclick.net/ddm/trackimp/N9390.1844606ROKU.COM/B20573793.210603215;dc_trk_aid=427529739;dc_trk_cid=106300391;ord=1539971036953;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=?]]>
+              </Tracking>
+              <Tracking event="firstQuartile">
+                <![CDATA[https://s.innovid.com/1x1.gif?project_hash=1h9orr&client_id=1779&video_id=340824&channel_id=1013432&publisher_id=1460&placement_tag_id=0&project_state=2&r=1539971036953&placement_hash=1fjddg&action=vpoint&event_id=percent&event_value=25]]>
+              </Tracking>
+              <Tracking event="midpoint">
+                <![CDATA[https://s.innovid.com/1x1.gif?project_hash=1h9orr&client_id=1779&video_id=340824&channel_id=1013432&publisher_id=1460&placement_tag_id=0&project_state=2&r=1539971036953&placement_hash=1fjddg&action=vpoint&event_id=percent&event_value=50]]>
+              </Tracking>
+              <Tracking event="thirdQuartile">
+                <![CDATA[https://s.innovid.com/1x1.gif?project_hash=1h9orr&client_id=1779&video_id=340824&channel_id=1013432&publisher_id=1460&placement_tag_id=0&project_state=2&r=1539971036953&placement_hash=1fjddg&action=vpoint&event_id=percent&event_value=75]]>
+              </Tracking>
+              <Tracking event="complete">
+                <![CDATA[https://s.innovid.com/1x1.gif?project_hash=1h9orr&client_id=1779&video_id=340824&channel_id=1013432&publisher_id=1460&placement_tag_id=0&project_state=2&r=1539971036953&placement_hash=1fjddg&action=vpoint&event_id=percent&event_value=100]]>
+              </Tracking>
+            </TrackingEvents>
+            <VideoClicks>
+              <ClickThrough>
+                <![CDATA[https://dts.innovid.com/clktru/action/vclk?project_hash=1h9orr&client_id=1779&video_id=340824&channel_id=1013432&publisher_id=1460&placement_tag_id=0&project_state=2&r=1539971036953&placement_hash=1fjddg&action=clktru&click=https%3A%2F%2Fad.doubleclick.net%2Fddm%2Ftrackclk%2FN9390.1844606ROKU.COM%2FB20573793.210603215%3Bdc_trk_aid%3D427529739%3Bdc_trk_cid%3D106300391%3Bdc_lat%3D%3Bdc_rdid%3D%3Btag_for_child_directed_treatment%3D%3Btfua%3D]]>
+              </ClickThrough>
+            </VideoClicks>
+            <MediaFiles>
+              <MediaFile delivery="progressive" width="640" height="360" type="video/mp4" bitrate="800">
+                <![CDATA[https://s-static.innovid.com/media/encoded/09_18/175036/2_source_48502_213342.mp4]]>
+              </MediaFile>
+              <MediaFile delivery="progressive" width="640" height="360" type="video/mp4" bitrate="400">
+                <![CDATA[https://s-static.innovid.com/media/encoded/09_18/175036/10_source_48502_213342.mp4]]>
+              </MediaFile>
+              <MediaFile delivery="progressive" width="1280" height="720" type="video/mp4" bitrate="2000">
+                <![CDATA[https://s-static.innovid.com/media/encoded/09_18/175036/11_source_48502_213342.mp4]]>
+              </MediaFile>
+            </MediaFiles>
+          </Linear>
+        </Creative>
+      </Creatives>
+    </InLine>
+  </Ad>
+</VAST>

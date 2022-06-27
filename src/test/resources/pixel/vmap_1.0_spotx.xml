@@ -1,0 +1,23 @@
+<vmap:VMAP xmlns:vmap="http://www.iab.net/videosuite/vmap" version="1.0">
+  <vmap:AdBreak timeOffset="00:00:15" breakType="linear" breakId="5142">
+    <vmap:AdSource id="1">
+      <vmap:AdTagURI templateType="vast3">
+        <![CDATA[https://search.spotxchange.com/vast/3.0/79391?pod%5Bsize%5D=2&pod%5Bmax_ad_dur%5D=15&pod%5Bmax_pod_dur%5D=30&content_page_url=spotx.tv&VPI=MP4]]>
+      </vmap:AdTagURI>
+    </vmap:AdSource>
+  </vmap:AdBreak>
+  <vmap:AdBreak timeOffset="00:00:25" breakType="linear" breakId="5143">
+    <vmap:AdSource id="2">
+      <vmap:AdTagURI templateType="vast3">
+        <![CDATA[https://search.spotxchange.com/vast/3.0/79391?pod%5Bsize%5D=2&pod%5Bmax_ad_dur%5D=15&pod%5Bmax_pod_dur%5D=30&content_page_url=spotx.tv&VPI=MP4]]>
+      </vmap:AdTagURI>
+    </vmap:AdSource>
+  </vmap:AdBreak>
+  <vmap:AdBreak timeOffset="00:00:05" breakType="linear" breakId="5144">
+    <vmap:AdSource id="3">
+      <vmap:AdTagURI templateType="vast3">
+        <![CDATA[https://search.spotxchange.com/vast/3.0/79391?pod%5Bsize%5D=2&pod%5Bmax_ad_dur%5D=15&pod%5Bmax_pod_dur%5D=30&content_page_url=spotx.tv&VPI=MP4]]>
+      </vmap:AdTagURI>
+    </vmap:AdSource>
+  </vmap:AdBreak>
+</vmap:VMAP>

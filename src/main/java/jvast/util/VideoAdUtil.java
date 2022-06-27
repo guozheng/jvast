@@ -25,6 +25,9 @@ import org.apache.logging.log4j.Logger;
 public class VideoAdUtil {
   private static final Logger LOGGER = LogManager.getLogger(VideoAdUtil.class);
 
+  public static final String VAST_VERSION_2_0 = "2.0";
+  public static final String VAST_VERSION_3_0 = "3.0";
+
   public static final String EMPTY_VAST_V2 = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n"
       + "<VAST xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:noNamespaceSchemaLocation=\"vast.xsd\" version=\"2.0\"/>";
   public static final String EMPTY_VAST_V2_2 = "<?xml version=\"1.0\" encoding=\"UTF-8\" ?>\n"
@@ -153,9 +156,9 @@ public class VideoAdUtil {
   public static final String DEFAULT_VMAP_VERSION = "1.0";
 
   // v1 pixel prefix
-  public static final String V1_PIXEL_PREFIX = "https://ravm.tv/pixel/v1?";
+  public static final String V1_PIXEL_PREFIX = "https://pixel.com/pixel/v1?";
   // v2 pixel prefix
-  public static final String V2_PIXEL_PREFIX = "https://ravm.tv/pixel/v2?";
+  public static final String V2_PIXEL_PREFIX = "https://pixel.com/pixel/v2?";
 
   public static Pair<String, Integer> CREATIVE_ID_NOT_FOUND = new Pair<>(UNKNOWN_CREATIVE_ID, -1);
 

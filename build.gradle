@@ -1,0 +1,38 @@
+plugins {
+    // Apply the java-library plugin for API and implementation separation.
+    id 'java-library'
+    id 'java'
+}
+
+repositories {
+    // Use Maven Central for resolving dependencies.
+    mavenCentral()
+}
+
+dependencies {
+
+    compileOnly 'org.projectlombok:lombok:1.18.24'
+    annotationProcessor 'org.projectlombok:lombok:1.18.24'
+
+    implementation 'com.google.guava:guava:30.1.1-jre'
+    implementation 'org.apache.logging.log4j:log4j-api:2.17.2'
+    implementation 'org.apache.logging.log4j:log4j-core:2.17.2'
+
+    // https://mvnrepository.com/artifact/junit/junit
+    testImplementation 'junit:junit:4.13.2'
+
+    testCompileOnly 'org.projectlombok:lombok:1.18.24'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.24'
+
+    // https://mvnrepository.com/artifact/org.jmockit/jmockit
+    testImplementation 'org.jmockit:jmockit:1.38'
+//    // https://mvnrepository.com/artifact/org.jmock/jmock-junit4
+//    testImplementation 'org.jmock:jmock-junit4:2.12.0'
+
+    // https://mvnrepository.com/artifact/org.eclipse.jetty/jetty-client
+//    testImplementation 'org.eclipse.jetty:jetty-client:11.0.11'
+
+    // https://mvnrepository.com/artifact/xerces/xercesImpl
+    testImplementation 'xerces:xercesImpl:2.12.2'
+
+}
