@@ -276,13 +276,13 @@ public class VideoAdUtil {
     } else {
       //NOT VAST ad, try VMAP
       tag = StringUtil.getSubString("<vmap:VMAP", ">", adDoc, 0, EMPTY);
-      if (tag.equals(EMPTY)) {
-        LOGGER.debug("video ad is neither a VAST nor VMAP");
-        return AdTypeVersion.UNKNOWN;
-      } else {
+      if (!tag.equals(EMPTY)) {
         String version = StringUtil.getSubString("version=\"", "\"", tag, 0, DEFAULT_VMAP_VERSION);
         LOGGER.debug("type: VMAP, version: {}", version);
         return AdTypeVersion.fromTypeAndVersion("VMAP", version);
+      } else {
+        LOGGER.debug("video ad is neither a VAST nor VMAP");
+        return AdTypeVersion.UNKNOWN;
       }
     }
   }
