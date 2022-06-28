@@ -63,6 +63,7 @@ public class VastProcessor {
   public static StringBuilder process(StringBuilder vastDocBuilder,
       final AdTypeVersion adTypeVersion,
       final InputData inputData) {
+    StringBuilder builder = new StringBuilder();
     final String version = adTypeVersion.getVersion();
 
     // split the entire VAST xml into multiple ads
@@ -71,16 +72,17 @@ public class VastProcessor {
     // process each ad
     for (Ad ad : ads) {
       if (ad.getContent() != null) {
-        processSingleAd(ad, inputData);
-        vastDocBuilder.append(ad.getContent());
+        ad = processSingleAd(ad, inputData);
+        LOGGER.debug("============ ad content: {}", ad.getContent());
+        builder.append(ad.getContent());
       }
     }
 
     // construct the result VAST xml
-    vastDocBuilder.append(VAST_POSTFIX); // add postfix
-    vastDocBuilder.insert(0, getVastPrefix(version)); // prepend prefix
+    builder.append(VAST_POSTFIX); // add postfix
+    builder.insert(0, getVastPrefix(version)); // prepend prefix
 
-    return vastDocBuilder;
+    return builder;
   }
 
   public static StringBuilder process(String vastDoc,
@@ -99,7 +101,7 @@ public class VastProcessor {
   private static Ad processSingleAd(Ad ad,
       final InputData inputData) {
     StringBuilder adXml = ad.getContent();
-    LOGGER.trace("Single ad before processing: {}", adXml);
+    LOGGER.debug("Single ad before processing: {}", adXml);
 
     if (Strings.isEmpty(adXml)) {
       LOGGER.debug("Null or empty ad content from ad, skip ad processing");
@@ -122,7 +124,7 @@ public class VastProcessor {
     }
 
     ad.setContent(adXml); // update adData
-    LOGGER.trace("Single ad after processing: {}", adXml);
+    LOGGER.debug("Single ad after processing: {}", adXml);
 
     return ad;
   }

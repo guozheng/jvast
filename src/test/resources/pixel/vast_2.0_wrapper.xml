@@ -5,6 +5,12 @@
       <VASTAdTagURI>
         <![CDATA[https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/utility_samples&ciu_szs=300x250&impl=s&gdfp_req=1&env=vp&output=xml_vast2&unviewed_position_start=1&cust_params=sample_ct%3Dredirectlinear&correlator=909250540]]>
       </VASTAdTagURI>
+      <Error>
+        <![CDATA[https://pubads.g.doubleclick.net/pagead/interaction/?ai=BewLJ7iXdYKv8I4GcnAffiJK4B6CtkOsGAAAAEAEgqN27JjgAWIiq2MbXAWDJnvmGgICgGboBCjcyOHg5MF94bWzIAQXAAgLgAgDqAiUvMTI0MzE5MDk2L2V4dGVybmFsL3NpbmdsZV9hZF9zYW1wbGVz-AKE0h6AAwGQA6wCmAOsAqgDAeAEAdIFBhCIrvTSApAGAaAGJKgH7NUbqAfz0RuoB5bYG9gHAOAHC9IIBwiAYRABGB3YCAKACgWYCwGADAHQFQGAFwE&sigh=eLcGhdQz2gE&label=videoplayfailed[ERRORCODE]]]>
+      </Error>
+      <Impression>
+        <![CDATA[https://securepubads.g.doubleclick.net/pcs/view?xai=AKAOjssw8oZk6RrU3BpWOn-aRNXwzy0nDc5YfyZq7fKn-R_lwKrRf5x_txL8Hnc53mQ0zVNOl5J8t4UsqGQUeqxljIgYpAD3AaLqm0ksJOS5-MkwTT6HAVw-adOUoYBMfupvyZ8Lbpo41Igwqwh_LR4t-HrMmZqMZGyaabJqT9Ra5T2j18zowu01wr119h2SHNF2jCXUeDGX8--1x_GtubsKD6s8nHzw9Qo6iasNucxfdOOpcHicopj0WRajil_ryIBwdXEuGb7IW3t5HkNrJPlN93dY9o_8W2lhPYP9tyww5xXBZg&sig=Cg0ArKJSzHjB6EP7ct6gEAE&adurl=]]>
+      </Impression>
       <Creatives>
         <Creative AdID="602833">
           <Linear>

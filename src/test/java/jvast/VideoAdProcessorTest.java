@@ -37,7 +37,7 @@ public class VideoAdProcessorTest {
   private static VastParser v3ParserWithoutValidation = new VastParser(VastParser.VAST_3_0_SCHEMA_JVAST, false);
   private static VastParser v3ParserWithValidation = new VastParser(VastParser.VAST_3_0_SCHEMA_JVAST, true);
 
-  private void validateVastFromFile(String path, boolean schemaValidation) {
+  private VastParser validateVastFromFile(String path, boolean schemaValidation) {
     String vast = FileUtil.readFile(path);
     if (Strings.isBlank(vast)) {
       LOGGER.error("empty VAST from path: {}", path);
@@ -45,6 +45,7 @@ public class VideoAdProcessorTest {
     }
 
     String vastVersion = VideoAdUtil.getVastVersion(vast);
+    LOGGER.info("VAST version: {}", vastVersion);
 
     VastParser parser = null;
 
@@ -57,63 +58,83 @@ public class VideoAdProcessorTest {
       fail("Unknown VAST version: " + vastVersion);
     }
 
-    LOGGER.debug(
-        "======== vastVersion: {}, schemaValidation: {}, verifying VAST from file: {} ========",
+    LOGGER.info("======== vastVersion: {}, schemaValidation: {}, verifying VAST from file: {} ========",
         vastVersion, schemaValidation, path);
 
     int code = parser.process(vast);
-    LOGGER.debug("VAST parser error code: {}, {} for vast: \n{}", code,
+    LOGGER.info("VAST parser error code: {}, {} for vast: \n{}", code,
         VastParserErrorCode.getByVal(code), vast);
     assertEquals(
         "VAST parser should not give any error! Getting error: " + VastParserErrorCode.getByVal(
             code),
         VastParserErrorCode.ERROR_NONE.getValue(), code);
+
+    return parser;
   }
 
-  private void validateVastFromFile(String path) {
-    validateVastFromFile(path, true);
+  private VastParser validateVastFromFile(String path) {
+    return validateVastFromFile(path, true);
   }
 
   @Test
-  public void testInlineVastV2() {
-    final String filePath = "src/test/resources/pixel/vast_inline.xml";
-    //validate input file
-    validateVastFromFile(filePath);
+  public void testVastPixelInsertion() {
+    final String[] filePaths = {
+        "src/test/resources/pixel/vast_2.0_inline_companion_ads.xml",
+        "src/test/resources/pixel/vast_2.0_inline_nonlinear.xml",
+        "src/test/resources/pixel/vast_2.0_inline_spotx.xml",
+        "src/test/resources/pixel/vast_2.0_wrapper.xml",
+        "src/test/resources/pixel/vast_3.0_inline_companion_ads.xml",
+        "src/test/resources/pixel/vast_3.0_inline_dfp.xml",
+        "src/test/resources/pixel/vast_3.0_inline_nonlinear.xml",
+        "src/test/resources/pixel/vast_3.0_pods_dfp.xml",
+        "src/test/resources/pixel/vast_3.0_wrapper_dfp.xml"
+    };
 
-    //insert pixels
-    String videoAd = readFile(filePath);
-    LOGGER.debug("Video ad before processing: {}", videoAd);
+    for (String filePath : filePaths) {
+      LOGGER.info("testing pixel insertion for VAST: {}", filePath);
 
-    Multimap<PixelElementType, String> pixelMap = ArrayListMultimap.create();
-    final String impressionPixel = "https://adclick.com/impression";
-    pixelMap.put(PixelElementType.Impression, impressionPixel);
+      //validate input file
+      VastParser parser = validateVastFromFile(filePath);
+      LOGGER.info("original VAST is valid");
 
-    Multimap<TrackingEventElementType, String> trackingEventMap = ArrayListMultimap.create();
-    final String startTrackingEvent = "https://adclick.com/start";
-    trackingEventMap.put(TrackingEventElementType.start, startTrackingEvent);
+      //insert pixels
+      String videoAd = readFile(filePath);
+      LOGGER.debug("Video ad before processing: {}", videoAd);
 
-    InputData inputData = InputData.builder()
-        .pixelMap(pixelMap)
-        .trackingEventMap(trackingEventMap)
-        .build();
+      Multimap<PixelElementType, String> pixelMap = ArrayListMultimap.create();
+      final String impressionPixel = "https://adclick.com/impression";
+      pixelMap.put(PixelElementType.Impression, impressionPixel);
 
-    videoAd = process(videoAd, inputData);
-    LOGGER.debug("Video ad after processing: {}", videoAd);
+      Multimap<TrackingEventElementType, String> trackingEventMap = ArrayListMultimap.create();
+      final String startTrackingEvent = "https://adclick.com/start";
+      trackingEventMap.put(TrackingEventElementType.start, startTrackingEvent);
 
-    //verify inserted pixels and tracking events
-    int code = v2ParserWithoutValidation.process(videoAd);
-    assertEquals("VAST parser error code (0 means no error): " + VastParserErrorCode.getByVal(code) + "!!! ",
-        VastParserErrorCode.ERROR_NONE.getValue(), code);
-    VastModel model = v2ParserWithoutValidation.getModel();
-    assertNotNull("VAST model should not be null", model);
+      InputData inputData = InputData.builder()
+          .pixelMap(pixelMap)
+          .trackingEventMap(trackingEventMap)
+          .build();
 
-    VastModel vastModel = v2ParserWithoutValidation.getModel();
-    List<String> impressionPixels = vastModel.getImpressionPixels();
-    assertTrue(impressionPixels.contains(impressionPixel));
+      videoAd = process(videoAd, inputData);
+      LOGGER.info("Video ad after processing: {}", videoAd);
 
-    HashMap<TrackingEventsType, List<String>> mappings = vastModel.getTrackingPixels();
-    List<String> startTrackingEvents = mappings.get(TrackingEventsType.start);
-    assertTrue(startTrackingEvents.contains(startTrackingEvent));
+      //verify inserted pixels and tracking events
+      int code = parser.process(videoAd);
+      assertEquals(
+          "VAST parser error code (0 means no error): " + VastParserErrorCode.getByVal(code)
+              + "!!! ",
+          VastParserErrorCode.ERROR_NONE.getValue(), code);
+      VastModel model = parser.getModel();
+      assertNotNull("VAST model should not be null", model);
+
+      List<String> impressionPixels = model.getImpressionPixels();
+      assertTrue(impressionPixels.contains(impressionPixel));
+
+      HashMap<TrackingEventsType, List<String>> mappings = model.getTrackingPixels();
+      List<String> startTrackingEvents = mappings.get(TrackingEventsType.start);
+      assertTrue(startTrackingEvents.contains(startTrackingEvent));
+
+      LOGGER.info("pixel insertion passed for VAST: {}", filePath);
+    }
   }
 
 }

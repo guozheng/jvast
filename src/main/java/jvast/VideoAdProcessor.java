@@ -26,16 +26,16 @@ public class VideoAdProcessor {
     final AdTypeVersion adTypeVersion = VideoAdUtil.getVideoAdType(videoAdBuilder);
     if (adTypeVersion.equals(AdTypeVersion.UNKNOWN)) {
       LOGGER.error("Unsupported video ad type");
-      return videoAdBuilder;
+      return videoAdBuilder; // no change
     }
 
     if (adTypeVersion.getType().equals("VAST")) {
-      VastProcessor.process(videoAdBuilder, adTypeVersion, inputData);
+      return VastProcessor.process(videoAdBuilder, adTypeVersion, inputData);
     } else {
       LOGGER.error("Unsupported video ad type or version: {}", adTypeVersion);
+      return videoAdBuilder; // no change
     }
 
-    return videoAdBuilder;
   }
 
   public static String process(String videoAd, InputData inputData) {
@@ -44,7 +44,7 @@ public class VideoAdProcessor {
 
   public static void main(String[] args) {
     String videoAd = readFile("src/test/resources/pixel/vast_inline.xml");
-    LOGGER.debug("Video ad before processing: {}", videoAd);
+    LOGGER.info("Video ad before processing: {}", videoAd);
 
     Multimap<PixelElementType, String> pixelMap = ArrayListMultimap.create();
     pixelMap.put(PixelElementType.Impression, "https://adclick.com/impression");
@@ -58,7 +58,7 @@ public class VideoAdProcessor {
         .build();
 
     videoAd = process(videoAd, inputData);
-    LOGGER.debug("Video ad after processing: {}", videoAd);
+    LOGGER.info("Video ad after processing: {}", videoAd);
   }
 
   public static String readFile(String filePath) {
