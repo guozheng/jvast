@@ -19,9 +19,6 @@
               <Tracking event="start">
                 <![CDATA[https://pubads.g.doubleclick.net/pagead/conversion/?ai=Bs27fJCLJW5CVA4mAkwPu2J_oCty68qtFAAAAEAEgvfnFJTgAWM_QtIGDBGDJloSJhKTsD7IBCHJva3UuY29tugENMTkyMHgxMDgwX3htbMgBBdoBEGh0dHA6Ly9yb2t1LmNvbS-YApDVAcACAuACAOoCJi84MjExNDI2OS9yYW1zLW5yYWZzcy9zYi80NjA0MV8xNV8yMDE4-AKE0h6QA-ADmAPgA6gDAeAEAdIFBhCzkPfbEZAGAaAGJNgHAOAHCtIIBwiAYRABGAE&sigh=aY6f70TcPdw&label=part2viewed&ad_mt=[AD_MT]]]>
               </Tracking>
-              <Tracking event="start">
-                <![CDATA[https://p.ads.roku.com/pixelServer/p.html?&meType=1&evType=0&deType=ROKU_ADS_DEVICE_MODEL&chID=ROKU_ADS_APP_ID&cID=2358877836&pIID=4756195379&crID=138247219279&deID=ROKU_ADS_TRACKING_ID&tStamp=ROKU_ADS_TIMESTAMP&extIP=ROKU_ADS_EXTERNAL_IP&genre=ROKU_ADS_CONTENT_GENRE&content=ROKU_ADS_CONTENT_ID]]>
-              </Tracking>
               <Tracking event="firstQuartile">
                 <![CDATA[https://pubads.g.doubleclick.net/pagead/conversion/?ai=Bs27fJCLJW5CVA4mAkwPu2J_oCty68qtFAAAAEAEgvfnFJTgAWM_QtIGDBGDJloSJhKTsD7IBCHJva3UuY29tugENMTkyMHgxMDgwX3htbMgBBdoBEGh0dHA6Ly9yb2t1LmNvbS-YApDVAcACAuACAOoCJi84MjExNDI2OS9yYW1zLW5yYWZzcy9zYi80NjA0MV8xNV8yMDE4-AKE0h6QA-ADmAPgA6gDAeAEAdIFBhCzkPfbEZAGAaAGJNgHAOAHCtIIBwiAYRABGAE&sigh=aY6f70TcPdw&label=videoplaytime25&ad_mt=[AD_MT]]]>
               </Tracking>
@@ -77,9 +74,6 @@
             <TrackingEvents>
               <Tracking event="start">
                 <![CDATA[https://pubads.g.doubleclick.net/pagead/conversion/?ai=Bs27fJCLJW5CVA4mAkwPu2J_oCty68qtFAAAAEAEgvfnFJTgAWM_QtIGDBGDJloSJhKTsD7IBCHJva3UuY29tugENMTkyMHgxMDgwX3htbMgBBdoBEGh0dHA6Ly9yb2t1LmNvbS-YApDVAcACAuACAOoCJi84MjExNDI2OS9yYW1zLW5yYWZzcy9zYi80NjA0MV8xNV8yMDE4-AKE0h6QA-ADmAPgA6gDAeAEAdIFBhCzkPfbEZAGAaAGJNgHAOAHCtIIBwiAYRABGAE&sigh=aY6f70TcPdw&label=part2viewed&ad_mt=[AD_MT]]]>
-              </Tracking>
-              <Tracking event="start">
-                <![CDATA[https://p.ads.roku.com/pixelServer/p.html?&meType=1&evType=0&deType=ROKU_ADS_DEVICE_MODEL&chID=ROKU_ADS_APP_ID&cID=2358877836&pIID=4756195379&crID=138247219279&deID=ROKU_ADS_TRACKING_ID&tStamp=ROKU_ADS_TIMESTAMP&extIP=ROKU_ADS_EXTERNAL_IP&genre=ROKU_ADS_CONTENT_GENRE&content=ROKU_ADS_CONTENT_ID]]>
               </Tracking>
               <Tracking event="firstQuartile">
                 <![CDATA[https://pubads.g.doubleclick.net/pagead/conversion/?ai=Bs27fJCLJW5CVA4mAkwPu2J_oCty68qtFAAAAEAEgvfnFJTgAWM_QtIGDBGDJloSJhKTsD7IBCHJva3UuY29tugENMTkyMHgxMDgwX3htbMgBBdoBEGh0dHA6Ly9yb2t1LmNvbS-YApDVAcACAuACAOoCJi84MjExNDI2OS9yYW1zLW5yYWZzcy9zYi80NjA0MV8xNV8yMDE4-AKE0h6QA-ADmAPgA6gDAeAEAdIFBhCzkPfbEZAGAaAGJNgHAOAHCtIIBwiAYRABGAE&sigh=aY6f70TcPdw&label=videoplaytime25&ad_mt=[AD_MT]]]>

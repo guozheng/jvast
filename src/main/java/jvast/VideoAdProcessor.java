@@ -29,6 +29,9 @@ public class VideoAdProcessor {
       return videoAdBuilder; // no change
     }
 
+    //based on video ad type and version, call a matching ad processor
+    //TODO: support VAST 4.x
+    //TODO: add a VMAP processor
     if (adTypeVersion.getType().equals("VAST")) {
       return VastProcessor.process(videoAdBuilder, adTypeVersion, inputData);
     } else {
