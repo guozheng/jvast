@@ -1,7 +1,11 @@
 plugins {
     id 'java'
     id 'application'
+    id 'maven-publish'
 }
+
+group = "org.woshiadai"
+version = "0.0.1"
 
 repositories {
     // Use Maven Central for resolving dependencies.
@@ -34,7 +38,16 @@ dependencies {
     testImplementation 'xerces:xercesImpl:2.12.2'
 }
 
-mainClassName = 'jvast.VideoAdProcessor'
+mainClassName = 'org.woshiadai.jvast.VideoAdProcessor'
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            artifactId = 'jvast'
+            from components.java
+        }
+    }
+}
 
 task fatJar(type: Jar) {
     manifest {

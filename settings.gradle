@@ -8,4 +8,3 @@
  */
 
 rootProject.name = 'jvast'
-include('lib')

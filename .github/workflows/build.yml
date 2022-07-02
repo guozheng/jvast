@@ -8,6 +8,8 @@ name: Java CI
 on:
   push:
   workflow_dispatch:
+  release:
+    types: [published]
 
 jobs:
   build:
