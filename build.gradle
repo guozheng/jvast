@@ -2,9 +2,10 @@ plugins {
     id 'java'
     id 'application'
     id 'maven-publish'
+    id 'signing'
 }
 
-group = "org.woshiadai"
+group = "io.github.guozheng"
 version = "0.0.1"
 
 repositories {
@@ -47,6 +48,21 @@ publishing {
             from components.java
         }
     }
+
+    repositories {
+        maven {
+            name = "OSSRH"
+            url = "https://oss.sonatype.org/service/local/staging/deploy/maven2/"
+            credentials {
+                username = System.getenv("MAVEN_USERNAME")
+                password = System.getenv("MAVEN_PASSWORD")
+            }
+        }
+    }
+}
+
+signing {
+    sign configurations.archives
 }
 
 task fatJar(type: Jar) {
