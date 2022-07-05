@@ -28,13 +28,10 @@ dependencies {
     testCompileOnly 'org.projectlombok:lombok:1.18.24'
     testAnnotationProcessor 'org.projectlombok:lombok:1.18.24'
 
-    // https://mvnrepository.com/artifact/org.jmockit/jmockit
-    testImplementation 'org.jmockit:jmockit:1.38'
-//    // https://mvnrepository.com/artifact/org.jmock/jmock-junit4
+//    // https://mvnrepository.com/artifact/org.jmockit/jmockit
+//    testImplementation 'org.jmockit:jmockit:1.38'
+////    // https://mvnrepository.com/artifact/org.jmock/jmock-junit4
 //    testImplementation 'org.jmock:jmock-junit4:2.12.0'
-
-    // https://mvnrepository.com/artifact/org.eclipse.jetty/jetty-client
-//    testImplementation 'org.eclipse.jetty:jetty-client:11.0.11'
 
     // https://mvnrepository.com/artifact/xerces/xercesImpl
     testImplementation 'xerces:xercesImpl:2.12.2'
@@ -80,9 +77,18 @@ publishing {
         }
     }
 
-    // Use this block if you want to use Gradle Publish plugin to publish to OSSRH
-    // Set the two environment variables MAVEN_USERNAME and MAVEN_PASSWORD using your OSSRH username and password
-//    repositories {
+    repositories {
+        maven {
+            name = "GitHubPackages"
+            url = "https://maven.pkg.github.com/guozheng/jvast"
+            credentials {
+                username = System.getenv("GITHUB_ACTOR")
+                password = System.getenv("GITHUB_TOKEN")
+            }
+        }
+
+        // Use this block if you want to use Gradle Publish plugin to publish to OSSRH
+        // Set the two environment variables MAVEN_USERNAME and MAVEN_PASSWORD using your OSSRH username and password
 //        maven {
 //            name = "OSSRH"
 //            url = "https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/"
@@ -91,7 +97,7 @@ publishing {
 //                password = System.getenv("MAVEN_PASSWORD")
 //            }
 //        }
-//    }
+    }
 }
 
 nexusPublishing {
