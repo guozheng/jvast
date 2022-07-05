@@ -2,10 +2,12 @@ plugins {
     id 'java'
     id 'application'
     id 'maven-publish'
+    id 'signing'
+    id 'io.github.gradle-nexus.publish-plugin' version '1.1.0'
 }
 
 group = "io.github.guozheng"
-version = "0.0.5"
+version = "0.0.4"
 
 repositories {
     // Use Maven Central for resolving dependencies.
@@ -74,17 +76,19 @@ publishing {
             }
         }
     }
+}
 
+nexusPublishing {
     repositories {
-        maven {
-            name = "GitHubPackages"
-            url = "https://maven.pkg.github.com/guozheng/jvast"
-            credentials {
-                username = System.getenv("GITHUB_ACTOR")
-                password = System.getenv("GITHUB_TOKEN")
-            }
+        sonatype {  //only for users registered in Sonatype after 24 Feb 2021
+            nexusUrl.set(uri("https://s01.oss.sonatype.org/service/local/"))
+            snapshotRepositoryUrl.set(uri("https://s01.oss.sonatype.org/content/repositories/snapshots/"))
         }
     }
+}
+
+signing {
+    sign publishing.publications.mavenJava
 }
 
 javadoc {
