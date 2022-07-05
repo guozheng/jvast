@@ -22,6 +22,13 @@ import org.apache.logging.log4j.Logger;
 public class VideoAdProcessor {
   private static final Logger LOGGER = LogManager.getLogger(VideoAdProcessor.class);
 
+  /**
+   * Process video ad from a {@link StringBuilder} input.
+   *
+   * @param videoAdBuilder    {@link StringBuilder} video ad input from string builder
+   * @param inputData         {@link InputData} input data for processing
+   * @return                  {@link StringBuilder} video ad output
+   */
   public static StringBuilder process(StringBuilder videoAdBuilder, InputData inputData) {
     final AdTypeVersion adTypeVersion = VideoAdUtil.getVideoAdType(videoAdBuilder);
     if (adTypeVersion.equals(AdTypeVersion.UNKNOWN)) {
@@ -41,46 +48,15 @@ public class VideoAdProcessor {
 
   }
 
+  /**
+   * Process video ad from a {@link String} input.
+   *
+   * @param videoAd         {@link String} video ad input from string
+   * @param inputData       {@link InputData} input data for processing
+   * @return                {@link String} video ad output
+   */
   public static String process(String videoAd, InputData inputData) {
     return process(new StringBuilder(videoAd), inputData).toString();
-  }
-
-  public static void main(String[] args) {
-    String videoAd = readFile("src/test/resources/pixel/vast_inline.xml");
-    LOGGER.info("Video ad before processing: {}", videoAd);
-
-    Multimap<PixelElementType, String> pixelMap = ArrayListMultimap.create();
-    pixelMap.put(PixelElementType.Impression, "https://adclick.com/impression");
-
-    Multimap<TrackingEventElementType, String> trackingEventMap = ArrayListMultimap.create();
-    trackingEventMap.put(TrackingEventElementType.start, "https://adclick.com/start");
-
-    InputData inputData = InputData.builder()
-        .pixelMap(pixelMap)
-        .trackingEventMap(trackingEventMap)
-        .build();
-
-    videoAd = process(videoAd, inputData);
-    LOGGER.info("Video ad after processing: {}", videoAd);
-  }
-
-  public static String readFile(String filePath) {
-    StringBuilder sb = new StringBuilder();
-    try (BufferedReader br = new BufferedReader(
-        new InputStreamReader(
-            new FileInputStream(filePath), StandardCharsets.UTF_8))) {
-      String line;
-      while ((line = br.readLine()) != null) {
-        sb.append(line).append(System.lineSeparator());
-      }
-    } catch (FileNotFoundException e) {
-      LOGGER.error("File not found: {}", filePath);
-    } catch (IOException e) {
-      LOGGER.error("Error reading from file: {}", filePath, e);
-    } finally {
-      String fileContent = sb.toString().trim();
-      return fileContent;
-    }
   }
 
 }

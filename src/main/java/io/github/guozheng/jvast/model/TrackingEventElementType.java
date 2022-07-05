@@ -1,5 +1,8 @@
 package io.github.guozheng.jvast.model;
 
+/**
+ * Enum representing different types of TrackingEvent elements.
+ */
 public enum TrackingEventElementType {
   unknown,
   creativeView,

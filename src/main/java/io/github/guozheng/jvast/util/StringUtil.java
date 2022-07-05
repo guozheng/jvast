@@ -11,6 +11,9 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 @UtilityClass
+/**
+ * An utility class for string processing.
+ */
 public class StringUtil {
   private static final Logger LOGGER = LogManager.getLogger(StringUtil.class);
   public static final String EMPTY = "";

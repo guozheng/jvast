@@ -44,6 +44,9 @@ import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.util.Strings;
 import io.github.guozheng.jvast.util.StringUtil;
 
+/**
+ * A utility class for processing VAST doc.
+ */
 public class VastProcessor {
   private static Set<Pair<String, String>> TRACKING_EVENT_PARENTS = new HashSet<>(4);
 
@@ -60,6 +63,14 @@ public class VastProcessor {
 
   private static final Logger LOGGER = LogManager.getLogger(VastProcessor.class);
 
+  /**
+   * Process a VAST doc from a {@link StringBuilder} input, e.g. insert pixels.
+   *
+   * @param vastDocBuilder      {@link StringBuilder} the StringBuilder holding the input VAST doc
+   * @param adTypeVersion       {@link AdTypeVersion} ad type and version for input VAST doc
+   * @param inputData           {@link InputData} input data for processing
+   * @return                    {@link StringBuilder} the StringBuilder holding the output VAST doc
+   */
   public static StringBuilder process(StringBuilder vastDocBuilder,
       final AdTypeVersion adTypeVersion,
       final InputData inputData) {
@@ -85,6 +96,14 @@ public class VastProcessor {
     return builder;
   }
 
+  /**
+   * Process a VAST doc from a {@link String} input, e.g. insert pixels.
+   *
+   * @param vastDoc           {@link String} the String holding the input VAST doc
+   * @param adTypeVersion     {@link AdTypeVersion} ad type and version for input VAST doc
+   * @param inputData         {@link InputData} input data for processing
+   * @return                  {@link StringBuilder} the StringBuilder holding the output VAST doc
+   */
   public static StringBuilder process(String vastDoc,
       final AdTypeVersion adTypeVersion,
       final InputData inputData) {

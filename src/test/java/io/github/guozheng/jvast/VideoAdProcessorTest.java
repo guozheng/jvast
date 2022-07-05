@@ -1,7 +1,7 @@
 package io.github.guozheng.jvast;
 
 import static io.github.guozheng.jvast.VideoAdProcessor.process;
-import static io.github.guozheng.jvast.VideoAdProcessor.readFile;
+import static io.github.guozheng.jvast.util.FileUtil.readFile;
 import static io.github.guozheng.jvast.util.VideoAdUtil.VAST_VERSION_2_0;
 import static io.github.guozheng.jvast.util.VideoAdUtil.VAST_VERSION_3_0;
 import static org.junit.Assert.assertEquals;
@@ -38,7 +38,7 @@ public class VideoAdProcessorTest {
   private static VastParser v3ParserWithValidation = new VastParser(VastParser.VAST_3_0_SCHEMA_JVAST, true);
 
   private VastParser validateVastFromFile(String path, boolean schemaValidation) {
-    String vast = FileUtil.readFile(path);
+    String vast = readFile(path);
     if (Strings.isBlank(vast)) {
       LOGGER.error("empty VAST from path: {}", path);
       fail("empty VAST from path: " + path);

@@ -19,14 +19,28 @@ public enum AdTypeVersion {
     this.version = version;
   }
 
+  /**
+   * Get type value.
+   * @return    {@link String} type value
+   */
   public String getType() {
     return type;
   }
 
+  /**
+   * Get version value.
+   * @return    {@link String} version value
+   */
   public String getVersion() {
     return version;
   }
 
+  /**
+   * Get {@link AdTypeVersion} given type and version values.
+   * @param type        {@link String} type value
+   * @param version     {@link String} version value
+   * @return            {@link AdTypeVersion} ad type enum value
+   */
   public static AdTypeVersion fromTypeAndVersion(String type, String version) {
     if (type.equalsIgnoreCase("VAST")) {
       switch (version) {

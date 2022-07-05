@@ -5,6 +5,9 @@ import lombok.Data;
 
 @Data
 @Builder
+/**
+ * The class representing a pixel.
+ */
 public class Pixel {
   private PixelElementType type;
   private String url;

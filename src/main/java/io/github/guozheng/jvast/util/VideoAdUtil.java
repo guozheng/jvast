@@ -19,6 +19,9 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 @UtilityClass
+/**
+ * Util class for processing VAST.
+ */
 public class VideoAdUtil {
   private static final Logger LOGGER = LogManager.getLogger(VideoAdUtil.class);
 
@@ -552,7 +555,7 @@ public class VideoAdUtil {
    * For example: <pre>{@code <Impression><![CDATA[pixel_url]]></Impression>}</pre>
    * @param sb                  {@link StringBuilder} xml content string builder
    * @param pixelType           {@link PixelElementType} pixel type
-   * @param pixelUrls           {@link Collection<String>} pixel urls
+   * @param pixelUrls           {@code Collection<String>} pixel urls
    * @return                    {@link StringBuilder} string builder for pixel element
    */
   public static StringBuilder appendPixelElementsOfType(StringBuilder sb, PixelElementType pixelType,
