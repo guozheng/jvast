@@ -27,6 +27,8 @@ InputData inputData = InputData.builder()
 videoAd = VideoAdProcessor.process(videoAd, inputData);
 ```
 
+You can clone this repo and build the jar to use. Or you can use the library from Maven Central project: https://mvnrepository.com/artifact/io.github.guozheng/jvast
+
 ## Build
 ```shell
 ./gradles fatJar
@@ -45,7 +47,7 @@ To run the tests:
 ./gradlew test
 ```
 
-## Publishing
+## Publishing to Maven Central
 ```shell
 ./gradlew publishToSonatype closeSonatypeStagingRepository
 ```
