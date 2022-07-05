@@ -109,11 +109,8 @@ nexusPublishing {
     }
 }
 
-//signing {
-//    sign configurations.archives
-//}
-
 signing {
+    required { gradle.taskGraph.hasTask("nexusPublishing") }
     sign publishing.publications.mavenJava
 }
 
