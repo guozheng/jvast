@@ -45,6 +45,12 @@ To run the tests:
 ./gradlew test
 ```
 
+## Publishing
+```shell
+./gradlew publishToSonatype closeSonatypeStagingRepository
+```
+For more information on how to publish to Maven Central, check out this [Medium article](https://medium.com/@guozheng-ge/how-to-publish-a-library-on-maven-central-88889ba9ff41).
+
 ## Todo Tasks
    * Support VAST 4.x
    * Support VMAP

@@ -7,7 +7,7 @@ plugins {
 }
 
 group = "io.github.guozheng"
-version = "0.0.2"
+version = "0.0.3"
 
 repositories {
     // Use Maven Central for resolving dependencies.
@@ -80,6 +80,8 @@ publishing {
         }
     }
 
+    // Use this block if you want to use Gradle Publish plugin to publish to OSSRH
+    // Set the two environment variables MAVEN_USERNAME and MAVEN_PASSWORD using your OSSRH username and password
 //    repositories {
 //        maven {
 //            name = "OSSRH"
