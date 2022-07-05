@@ -3,10 +3,11 @@ plugins {
     id 'application'
     id 'maven-publish'
     id 'signing'
+    id 'io.github.gradle-nexus.publish-plugin' version '1.1.0'
 }
 
 group = "io.github.guozheng"
-version = "0.0.1"
+version = "0.0.2"
 
 repositories {
     // Use Maven Central for resolving dependencies.
@@ -41,28 +42,77 @@ dependencies {
 
 mainClassName = 'org.woshiadai.jvast.VideoAdProcessor'
 
+java {
+    withSourcesJar()
+    withJavadocJar()
+}
+
 publishing {
     publications {
         mavenJava(MavenPublication) {
             artifactId = 'jvast'
             from components.java
+            pom {
+                name = 'jvast'
+                description = 'A Java library for video ad processing, e.g. insert pixels, etc.'
+                url = 'https://github.com/guozheng/jvast'
+                licenses {
+                    license {
+                        name = 'The MIT License (MIT)'
+                        url = 'https://choosealicense.com/licenses/mit/'
+                    }
+                }
+                developers {
+                    developer {
+                        id = 'guozheng'
+                        name = 'Guozheng Ge'
+                        email = 'woshiadai@me.com'
+                        organization = "self"
+                        organizationUrl = "https://github.com/guozheng"
+                    }
+                }
+                scm {
+                    connection = 'scm:git:git://github.com/guozheng/jvast.git'
+                    developerConnection = 'scm:git:ssh://github.com:guozheng/jvast.git'
+                    url = 'https://github.com/guozheng/jvast'
+                }
+            }
         }
     }
 
+//    repositories {
+//        maven {
+//            name = "OSSRH"
+//            url = "https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/"
+//            credentials {
+//                username = System.getenv("MAVEN_USERNAME")
+//                password = System.getenv("MAVEN_PASSWORD")
+//            }
+//        }
+//    }
+}
+
+nexusPublishing {
     repositories {
-        maven {
-            name = "OSSRH"
-            url = "https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/"
-            credentials {
-                username = System.getenv("MAVEN_USERNAME")
-                password = System.getenv("MAVEN_PASSWORD")
-            }
+        sonatype {  //only for users registered in Sonatype after 24 Feb 2021
+            nexusUrl.set(uri("https://s01.oss.sonatype.org/service/local/"))
+            snapshotRepositoryUrl.set(uri("https://s01.oss.sonatype.org/content/repositories/snapshots/"))
         }
     }
 }
 
+//signing {
+//    sign configurations.archives
+//}
+
 signing {
-    sign configurations.archives
+    sign publishing.publications.mavenJava
+}
+
+javadoc {
+    if(JavaVersion.current().isJava9Compatible()) {
+        options.addBooleanOption('html5', true)
+    }
 }
 
 task fatJar(type: Jar) {
