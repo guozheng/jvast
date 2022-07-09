@@ -1,6 +1,8 @@
 # jvast
 A Java library for video ad processing, e.g. insert pixels, etc.
 
+![example workflow](https://github.com/guozheng/jvast/actions/workflows/build.xml/badge.svg)
+
 ## Overview
 This is a Java library that supports VAST video ad processing, currently supporting pixel insertion. We are using a purely string manipulation based on index to achieve a better performance than typical DOM or SAX approaches.
 
