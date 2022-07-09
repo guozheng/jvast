@@ -38,9 +38,3 @@ jobs:
           name: Unit Tests            # Name of the check run which will be created
           path: build/test-results/test/*.xml    # Path to test results
           reporter: java-junit        # Format of test results
-          
-      - name: Publish Test Results
-        uses: EnricoMi/publish-unit-test-result-action@v1
-        if: always()
-        with:
-          files: build/test-results/test/*.xml"
